@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANOTAÇÕES E EVOLUÇÃO</title>
+    <link rel="stylesheet" href="Estilo_AnotacaoEvolucao.css">
+    
+
+</head>
+<body>
+    <header>
+        <div class="menu-icon">&#9776;</div>
+        <div class="logo">
+          <img src="img/Logo_ProntiClick..png" alt="Logo">
+        </div>
+        <div class="menu" id="dropdownMenu">
+          <a href="Prescricao_Medica.html">Prescrição Médica</a>
+          <a href="Prescricao_Enfermagem.html">Prescrição Enfermagem</a>
+          <a href="Controle-SSVV.html">Controle SSVV</a>
+          <a href="#">Anotação Evolução</a>
+          <a href="Entrar.html">Sair</a>
+        </div>
+        <div class="center-content">
+          <div class="input-group">
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Nome do paciente">
+          </div>
+          <div class="input-group">
+            <label for="Prontuario">Prontuário</label>
+            <input type="text" placeholder="Prontuário">
+        </div>
+        <div class="input-group">
+            <label for="Alergia">Alergia</label>
+            <input type="text" placeholder="Se houver">
+        </div>
+        <div class="input-group">
+            <label for="data de nascimento">Data Nasc</label>
+            <input type="date" placeholder="Data de Nascimento">
+        </div>
+        <div class="input-group">
+          <label for="sexo">Escolha o Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+        <div class="input-group">
+          <label for="registro">Registro:</label>
+            <input type="text" placeholder="Registro">
+        </div>
+        </div>
+        <div class="right-content">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="salvarAnotacoes()">Salvar</button>
+        </div>
+    </header>
+    <br>   
+    <br>
+    <table>
+        <tr>
+            <th colspan="2" class="subtitle">Prescrição Médica</th>
+          </tr>
+          <tr>
+            <td colspan="2" class="date">Vigência: <input type="date" id="data"> a <input type="date" id="data"> (24Hs)</td>
+          </tr>
+    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Tipo de Registro</th>
+                <th>Conteúdo</th>
+            </tr>
+            <tr>
+                <td>Anotações</td>
+                <td>
+                    <textarea rows="20" cols="50">
+                        Digite suas anotações aqui.
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+    
+        <table>
+            <tr>
+                <th>Tipo de Registro</th>
+                <th>Conteúdo</th>
+            </tr>
+            <tr>
+                <td>Evolução</td>
+                <td>
+                    <textarea rows="20" cols="50">
+                        Digite a evolução aqui.
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button onclick="goBack()">Voltar</button>
+
+    <footer>
+        <p><img class="logo2" src="img/senac-logo-sem-fundo.webp" alt="logo2">
+            &copy; 2023 - Desenvolvimento de Sistemas. 014 2021 0139</p>
+    </footer>
+<script src="Cabecalho.js"></script>
+<script src="Anotacoes.js"></script>
+
+</body>
+</html>
