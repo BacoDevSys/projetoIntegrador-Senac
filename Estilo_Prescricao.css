@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+}
+
+/* Estilos CSS para o cabeçalho e os elementos */
+header {
+  display: flex;
+  background: linear-gradient(70deg, rgb(255, 255, 255) 35%, rgba(2, 130, 242, 0.651) 60%);
+  padding: 30px; /*tananho do cabeçalho*/
+} 
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  margin-top: -26px;
+}
+.logo img {
+  width: 90px;
+  height: 90px;
+  border: 2px solid black; /*borda do logo*/
+  border-radius: 50%;/*deixa o logo redondo*/
+}
+.menu-icon {
+    cursor: pointer; /* botao hamburguer*/
+    font-size: 30px;
+    width: 40px;
+}
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 80px; 
+}
+.menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menu a:hover {
+    background-color: rgba(2, 130, 242, 0.651);
+}
+.center-content {
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+}
+.right-content {
+    text-align: right;
+}
+.input-group {
+  margin-right: 10px; /* Adiciona espaçamento horizontal entre os campos de entrada de texto */
+  display: inline-block; /* Exibe os campos na mesma linha */
+}
+
+label {
+  width: 8%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+/*cabecalho*/
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group select {
+  width: 100%; 
+  font-size: 13px; 
+}
+ /* Estilo para os botões */
+button {
+  background-color: #14134d;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilo para o botão "Voltar" */
+#btnVoltar {
+  margin-right: -200px;
+  background-color: #333;
+}
+
+/* Estilos para cabecalho*/
+@media only screen and (max-width: 390px) {
+  a {
+    font-size: 17px;
+ }
+  .logo img {
+    width: 80px;
+    height: 80px;
+    margin-top: 200%;
+    margin-left: -75%;
+  }
+  .input-group { /* entrada de formulario de dados*/
+    width: 80%;
+    margin-bottom: 3px;
+    font-size: 3px; 
+  }
+  .right-content { /*botão imprimir e salvar*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input {
+    margin-top: 10px; /*Alinhamento entrada de texto formulario de dados*/
+    font-size: 10px;
+  }  
+  .right-content{
+    width: 50%;
+    margin-top: 1%;
+  }
+}  
+/*fim cabecalho*/
+
+
+/*Estilos para tabelas*/
+td input[type="text"] {
+  width: 50%; /* Define a largura desejada, neste caso 100% para ocupar a largura da célula */
+  font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+  padding: 2px;
+
+}
+table { /* tabela de vigencia e demais tabela*/
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+.inner-table {
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+}
+th {
+  background-color: lightgray;
+}
+.subtitle {
+  font-weight: bold;
+  text-align: center;
+}
+.date {
+  text-align: center;
+}
+.signature {
+  text-align: center;
+  margin-top: 20px;
+}
+td.minha-classe {
+  width: 100px;
+}
+.inner-table {
+  width: 100%;
+}
+  
+
+/*estilos tabela*/
+@media screen and (max-width: 390px) {
+  body{
+    display: block;
+    margin: 0;
+    font-size: 9px;
+  }
+  .subtitle { /*titulo*/
+    font-size: 20px;
+  }
+  .date input { /* data vigencia*/
+    width: 100px;
+  }
+  .input-box select { /* habibitar celula selecao*/
+    width: 100%;
+  }
+  .table {
+      width: 100%;
+  }
+  th {
+      padding: 10px;
+      font-size: 9px;
+  }
+  td {
+    padding: 5px;
+    font-size: 9px;
+  }
+  .span-details{
+    padding: 50%;
+
+  }
+  
+  td input[type="text"] {
+    width: 75%; 
+    font-size: 14px; 
+    padding: 2px;
+  
+  }
+}
+
+footer {
+  background: linear-gradient(180deg, #ffffff 0%,#3498db 100%);
+  color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 18px;
+}
+
+.logo2 {
+  max-width: 100px;
+  margin-right: 50px;
+}
