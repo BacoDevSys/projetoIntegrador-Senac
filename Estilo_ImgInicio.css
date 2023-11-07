@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(70deg, rgb(255, 255, 255) 35%, rgba(2, 130, 242, 0.651) 60%);
+  }
+  
+  img {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  /* Estilo_ImgInicio.css */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Para tornar a imagem responsiva em telas menores */
+@media screen and (max-width: 600px) {
+  img {
+      width: 100%;
+  }
+}
