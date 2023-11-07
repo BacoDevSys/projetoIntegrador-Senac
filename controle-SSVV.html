@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTROLE E SSVV</title>
+  <link rel="stylesheet" href="Estilo_SSVV.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="menu-icon">&#9776;</div>
+    <div class="logo">
+      <img src="img/Logo_ProntiClick..png" alt="Logo">
+    </div>
+    <div class="menu" id="dropdownMenu">
+      <a href="Prescricao_Medica.html">Prescrição Médica</a>
+      <a href="Prescricao_Enfermagem.html">Prescrição Enfermagem</a>
+      <a href="#">Controle SSVV</a>
+      <a href="Anotacao_Evolucao.html">Anotação Evolução</a>
+      <a href="Informacoes.html">Sair</a>
+    </div>
+    <div class="center-content">
+      <div class="input-group">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Nome do paciente">
+      </div>
+      <div class="input-group">
+        <label for="Prontuario">Prontuário</label>
+        <input type="text" placeholder="Prontuário">
+      </div>
+      <div class="input-group">
+        <label for="Alergia">Alergia</label>
+        <input type="text" placeholder="Se houver">
+      </div>
+      <div class="input-group">
+        <label for="data de nascimento">Data Nasc</label>
+        <input type="date" placeholder="Data de Nascimento">
+      </div>
+      <div class="input-group">
+        <label for="sexo">Escolha o Sexo:</label>
+        <select name="sexo" id="sexo">
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="registro">Registro:</label>
+        <input type="text" placeholder="Registro">
+      </div>
+    </div>
+    <div class="right-content">
+      <button onclick="window.print()">Imprimir</button>
+      <button onclick="salvarAnotacoes()">Salvar</button>
+    </div>
+  </header>
+  <table>
+    <tr>
+      <td colspan="3" class="subtitle">Controle e Sinais Vitais</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="date">Vigência: <input type="date" id="data"> a <input type="date" id="data"> (24Hs)</td>
+    </tr>
+  </table>
+
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Ganhos</th>
+        <th>Perdas</th>
+        <th>SSVV</th>
+      </tr>
+      <tr>
+        <td>
+          <table class="inner-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Oral</th>
+                <th>EV</th>
+                <th>SNE/G</th>
+                <th>Hemode</th>
+                <th>outros</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time" ></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input class="tom" type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="time"></td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+
+
+
+        <td>
+          <table class="inner-table">
+            <thead>
+              <tr>
+                <th>Diurese</th>
+                <th>Evacuação</th>
+                <th>Sing</th>
+                <th>Vomito</th>
+                <th>Dreno</th>
+                <th>Outros</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </td>
+        <td>
+          <table class="inner-table">
+            <thead>
+              <tr>
+                <th>PA(mmHg)</th>
+                <th>FC(bpm)</th>
+                <th>FR(RPM)</th>
+                <th>T(C°)</th>
+                <th>SpO²(%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+                <td><input type="text" id="Medicação" size="2"> </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button onclick="goBack()">Voltar</button>
+  <footer>
+    <p><img class="logo2" src="img/senac-logo-sem-fundo.webp" alt="logo2">
+      &copy; 2023 - Desenvolvimento de Sistemas. 014 2021 0139</p>
+  </footer>
+  <script src="Cabecalho.js"></script>
+
+</body>
+
+</html>
