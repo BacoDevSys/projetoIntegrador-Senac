@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESCRIÇÃO MÉDICA</title>
+    <link rel="stylesheet" href="Estilo_Prescricao.css">
+</head>
+<body>
+  <header>
+    <div class="menu-icon">&#9776;</div>
+    <div class="logo">
+      <img src="img/Logo_ProntiClick..png" alt="Logo">
+    </div>
+    <div class="menu" id="dropdownMenu">
+      <a href="#">Prescrição Médica</a>
+      <a href="Prescricao_Enfermagem.html">Prescrição Enfermagem</a>
+      <a href="Controle-SSVV.html">Controle SSVV</a>
+      <a href="Anotacao_Evolucao.html">Anotação Evolução</a>
+      <a href="Informacoes.html">Sair</a>
+    </div>
+    <div class="center-content">
+      <div class="input-group">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Nome do paciente">
+      </div>
+      <div class="input-group">
+        <label for="Prontuario">Prontuário</label>
+        <input type="text" placeholder="Prontuário">
+    </div>
+    <div class="input-group">
+        <label for="Alergia">Alergia</label>
+        <input type="text" placeholder="Se houver">
+    </div>
+    <div class="input-group">
+        <label for="data de nascimento">Data Nasc</label>
+        <input type="date" placeholder="Data de Nascimento">
+    </div>
+    <div class="input-group">
+      <label for="sexo">Escolha o Sexo:</label>
+        <select name="sexo" id="sexo">
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outros">Outros</option>
+        </select>
+    </div>
+    <div class="input-group">
+      <label for="registro">Registro:</label>
+        <input type="text" placeholder="Registro">
+    </div>
+    </div>
+    <div class="right-content">
+        <button onclick="window.print()">Imprimir</button>
+        <button onclick="salvarAnotacoes()">Salvar</button>
+    </div>
+</header>
+
+<table>
+  <tr>
+    <th colspan="2" class="subtitle">Prescrição Médica</th>
+  </tr>
+  <tr>
+    <td colspan="2" class="date">Vigência: <input type="date" id="data"> a <input type="date" id="data"> (24Hs)</td>
+  </tr>
+ 
+
+  <table>
+    <tr>
+        <th class="annotation">Medicação:</th>
+        <th class="annotation">Dosagem:</th>
+        <th class="annotation">Via:</th>
+        <th class="annotation">Frequencia:</th>
+        <th class="annotation">Aprazamento:</th>
+    </tr>
+    <tr>
+      <td><input type="text" id="Medicação" > </td>
+      <td><input type="text" id="dosagem" > </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>   
+
+    <tr>
+      <td><input type="text" id="Medicação" size="5"> </td>
+      <td><input type="text" id="dosagem" size="5"> </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>  
+
+    <tr>
+      <td><input type="text" id="Medicação" size="5"> </td>
+      <td><input type="text" id="dosagem" size="5"> </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>  
+
+    <tr>
+      <td><input type="text" id="Medicação" size="5"> </td>
+      <td><input type="text" id="dosagem" size="5"> </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>  
+
+    <tr>
+      <td><input type="text" id="Medicação" size="5"> </td>
+      <td><input type="text" id="dosagem" size="5"> </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>  
+
+    <tr>
+      <td><input type="text" id="Medicação" size="5"> </td>
+      <td><input type="text" id="dosagem" size="5"> </td>
+      <td><div class="input-box" size="5">
+        <span class="details">Habilitar celula</span>
+        <select class="trem" name="Habilitar celula" required>
+          <option value="">Opção:</option> 
+          <option value="VO">VO</option>
+          <option value="EV">EV</option>
+          <option value="IM">IM</option>
+          <option value="SC">SC</option>
+          <option value="ID">ID</option>
+          <option value="SL">SL</option>
+        </select></td>
+      <td><input type="text" id="frequencia" size="5"> </td>
+      <td><input type="time" id="horario" name="horario" > <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"> <input type="time" id="horario" name="horario"></td>
+    </tr>  
+</table>
+<br>
+<br>
+<br>
+  <tr>
+      <td colspan="2" class="signature">Dr. (a): <input type="text" id="Assinatura"> 
+      <td colspan="2" class="signature">Coren: <input type="text" id="Assinatura"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<button onclick="goBack()">Voltar</button>
+<br>
+<footer>
+  <p><img class="logo2" src="img/senac-logo-sem-fundo.webp" alt="logo2">
+      &copy; 2023 - Desenvolvimento de Sistemas. 014 2021 0139</p>
+</footer>
+
+<script src="Cabecalho.js"></script>
+</body>
+</html>
