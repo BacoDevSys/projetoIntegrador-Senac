@@ -1,1 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1;height: 100px;
+    
+}
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 2;
+}
 
+.menu a {
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgb(255, 255, 255); 
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding:  20px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 75%;
+    max-width: 390px
+}
+
+header {
+    background-color: #10103d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo1 {
+    max-width: 500px;
+    margin-right: 50px;
+    margin-left: 25px;
+    text-align: center;
+    margin-top: -30px;
+    
+}
+.logo2 {
+    max-width: 100px;
+    margin-right: 50px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    fill-rule: Arial, sans-serif; /* Escolha sua fonte */
+        font-size: 30px; /* Tamanho da fonte em pixels */
+        text-align: center;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+   
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 60px;
+    
+}
+
+
+footer {
+    background: linear-gradient(180deg, #ffffff 0%,#3498db 100%);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+   
+    .logo1 img {
+        max-width: 80%;
+       }  
+ }
